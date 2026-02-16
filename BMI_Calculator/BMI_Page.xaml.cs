@@ -76,28 +76,28 @@ public partial class BMI_Page : ContentPage
         {
             "Underweight" => string.Join(Environment.NewLine, new[]
             {
-                "Increase calorie intake with nutrient-rich foods (e.g., nuts, lean protein, whole grains).",
-                "Incorporate strength training to build muscle mass",
-                "Consult a nutritionist if needed."
+                "- Increase calorie intake with nutrient-rich foods (e.g., nuts, lean protein, whole grains).",
+                "- Incorporate strength training to build muscle mass",
+                "- Consult a nutritionist if needed."
             }),
             "Normal Weight" => string.Join(Environment.NewLine, new[]
             {
-                "Maintain a balanced diet with proteins, healthy fats, and fiber",
-                "Stay physically active with at least 150 of exercise per week.",
-                "Keep regular check-ups to monitor overall health."
+                "- Maintain a balanced diet with proteins, healthy fats, and fiber",
+                "- Stay physically active with at least 150 of exercise per week.",
+                "- Keep regular check-ups to monitor overall health."
             }),
             "Overweight" => string.Join(Environment.NewLine, new[]
             {
-                "Reduce processed foods and focus on portion control.",
-                "Engage in regular aerobic exercises (e.g., jogging, swimming) and strength training.",
-                "Drink plenty of water and track your progress."
+                "- Reduce processed foods and focus on portion control.",
+                "- Engage in regular aerobic exercises (e.g., jogging, swimming) and strength training.",
+                "- Drink plenty of water and track your progress."
             }),
             "Obese" => string.Join(Environment.NewLine, new[]
             {
-                "Consult a doctor for personalized guidance.",
-                "Start with low-impact exercises (e.g., walking, cycling).",
-                "Follow a structured weight-loss meal plan and consider behavioral therapy for lifestyle changes.",
-                "Avoid sugary drinks and maintain a consistent sleep schedule."
+                "- Consult a doctor for personalized guidance.",
+                "- Start with low-impact exercises (e.g., walking, cycling).",
+                "- Follow a structured weight-loss meal plan and consider behavioral therapy for lifestyle changes.",
+                "- Avoid sugary drinks and maintain a consistent sleep schedule."
             }),
             _ => "Not enough data to provide recommendations. Please make sure you selected a gender and entered valid height and weight."
         };
