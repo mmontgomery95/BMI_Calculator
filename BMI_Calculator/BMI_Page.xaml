@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BMI_Calculator.BMI_Page"
+             Title="BMI_Page">
+    <Grid RowDefinitions="Auto, Auto, Auto, Auto, *"
+          ColumnDefinitions="*,*"
+          Margin="20"
+          RowSpacing="30"
+          ColumnSpacing="20">
+
+        <Label Text="BMI Calculator"
+               Grid.Row="0"
+               Grid.Column="0"
+               FontSize="Large" />
+
+        <Frame Grid.Row="1"
+               Grid.Column="0"
+               x:Name="FrameMale">
+            <VerticalStackLayout Spacing="10">
+                <Image Source="male"
+                       HeightRequest="100" />
+                <Label Text="Male" />
+            </VerticalStackLayout>
+        </Frame>
+
+        <Frame Grid.Row="1"
+               Grid.Column="1"
+               x:Name="FrameFemale">
+            <VerticalStackLayout Spacing="10">
+                <Image Source="female"
+                       HeightRequest="100" />
+                <Label Text="Female" />
+            </VerticalStackLayout>
+        </Frame>
+
+        <Frame Grid.Row="2"
+               Grid.Column="0"
+               Grid.ColumnSpan="2"
+               x:Name="FrameHeight">
+            <VerticalStackLayout>
+                <Label Text="Height (inches)" />
+                <Slider ThumbColor="Crimson"
+                        x:Name="SliderHeight"
+                        Minimum="0"
+                        Maximum="100"
+                        Value="50" />
+                <Label FontSize="Medium"
+                       FontAttributes="Bold"
+                       Text="{Binding Source={x:Reference SliderHeight},Path=Value,StringFormat='{0:F0}'}"
+                       x:Name="LblHeight" />
+            </VerticalStackLayout>
+        </Frame>
+
+        <Frame Grid.Row="3"
+               Grid.Column="0"
+               Grid.ColumnSpan="2"
+               x:Name="FrameWeight">
+            <VerticalStackLayout>
+                <Label Text="Weight (lbs)" />
+                <Slider x:Name="SliderWeight"
+                        ThumbColor="Crimson"
+                        Minimum="0"
+                        Maximum="500"
+                        Value="150" />
+                <Label FontSize="Medium"
+                       FontAttributes="Bold"
+                       Text="{Binding Source={x:Reference SliderWeight},Path=Value,StringFormat='{0:F0}'}"
+                       x:Name="LblWeight" />
+            </VerticalStackLayout>
+        </Frame>
+
+        <Button Grid.Row="4"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                BackgroundColor="Black"
+                TextColor="White"
+                FontAttributes="Bold"
+                FontSize="Medium"
+                Text="Calculate your BMI"
+                CornerRadius="20"
+                HorizontalOptions="Fill"
+                x:Name="BtnCalculateBMI" />
+    </Grid>
+</ContentPage>
