@@ -22,6 +22,10 @@
                        HeightRequest="100" />
                 <Label Text="Male" />
             </VerticalStackLayout>
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer x:Name="TapMale"
+                                      Tapped="TapMale_Tapped"/>
+            </Frame.GestureRecognizers>
         </Frame>
 
         <Frame Grid.Row="1"
@@ -32,6 +36,10 @@
                        HeightRequest="100" />
                 <Label Text="Female" />
             </VerticalStackLayout>
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer x:Name="TapFemale"
+                                      Tapped="TapFemale_Tapped" />
+            </Frame.GestureRecognizers>
         </Frame>
 
         <Frame Grid.Row="2"
@@ -80,6 +88,7 @@
                 Text="Calculate your BMI"
                 CornerRadius="20"
                 HorizontalOptions="Fill"
-                x:Name="BtnCalculateBMI" />
+                x:Name="BtnCalculateBMI" 
+                Clicked="BtnCalculateBMI_Clicked"/>
     </Grid>
 </ContentPage>
