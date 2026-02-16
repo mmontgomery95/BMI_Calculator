@@ -69,8 +69,8 @@
                 <Slider x:Name="SliderWeight"
                         ThumbColor="Crimson"
                         Minimum="0"
-                        Maximum="500"
-                        Value="150" />
+                        Maximum="300"
+                        Value="90" />
                 <Label FontSize="Medium"
                        FontAttributes="Bold"
                        Text="{Binding Source={x:Reference SliderWeight},Path=Value,StringFormat='{0:F0}'}"
