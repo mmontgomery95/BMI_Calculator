@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BMI_Calculator.ResultPage"
+             Title="Results"
+             NavigationPage.HasNavigationBar="False">
+    <VerticalStackLayout>
+        <Label Text="Your calculated BMI results:"
+               FontSize="Large"
+               Margin="30" />
+        <Frame HorizontalOptions="Center"
+               Padding="30"
+               HasShadow="True">
+            <VerticalStackLayout>
+                <Label Text="Gender: " 
+                       FontAttributes="Bold"/>
+                <Label x:Name="LblGender" />
+
+                <Label Text="BMI: " 
+                       FontAttributes="Bold"/>
+                <Label x:Name="LblBMI" />
+
+                <Label Text="Health Status: " 
+                       FontAttributes="Bold"/>
+                <Label x:Name="LblClass" />
+
+                <Button Text="Recommendations" 
+                        BackgroundColor="#2b0b98"
+                        Clicked="Button_Clicked" 
+                        Margin ="20, 20, 20, 0" />
+
+            </VerticalStackLayout>
+        </Frame>
+        <Button Text="Back to Home" 
+                Clicked="Button_Clicked_1" 
+                Margin="20"/>
+    </VerticalStackLayout>
+</ContentPage>
